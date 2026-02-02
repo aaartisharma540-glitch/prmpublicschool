@@ -2,7 +2,9 @@ import React from 'react';
 
 type State = { hasError: boolean; error?: Error };
 
-export default class ErrorBoundary extends React.Component<{}, State> {
+type Props = { children?: React.ReactNode };
+
+export default class ErrorBoundary extends React.Component<Props, State> {
   state: State = { hasError: false };
 
   static getDerivedStateFromError(error: Error) {
