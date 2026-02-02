@@ -31,3 +31,7 @@ Vite-specific note (IMPORTANT):
 This prevents blank/white screens after a successful deploy.
 
 Extra tip: If you use the GitHub Pages UI approach and the repo is a project site, ensure the Pages `Folder` is set to `/dist`.
+
+---
+
+Triggering a rebuild for deployment verification: 2026-02-02 10:15 UTC
