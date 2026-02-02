@@ -1,4 +1,3 @@
-
 import { SchoolData } from "../types";
 
 // Static Content Database - The "Single Source of Truth" for the GitHub deployment
@@ -38,6 +37,7 @@ const INSTITUTION_DATABASE: SchoolData = {
 
 /**
  * Fetches the school information directly from the static database.
+ * No delays or external API calls for maximum performance on GitHub Pages.
  */
 export const fetchSchoolInfo = async (): Promise<SchoolData> => {
   return INSTITUTION_DATABASE;
