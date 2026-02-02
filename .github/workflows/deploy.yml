@@ -29,6 +29,14 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm ci
+      - name: Configure Vite base for Pages
+        run: |
+          if [[ "$GITHUB_REPOSITORY" == *".github.io" ]]; then
+            echo "VITE_BASE=/" >> $GITHUB_ENV
+          else
+            REPO_NAME="${GITHUB_REPOSITORY#*/}"
+            echo "VITE_BASE=/${REPO_NAME}/" >> $GITHUB_ENV
+          fi
       - name: Build
         run: npm run build
       - name: Setup Pages
