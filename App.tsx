@@ -18,12 +18,12 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const init = async () => {
-      // Small delay for smooth intro on static hosting
-      const data = await fetchSchoolInfo();
-      // Artificial slight delay for the loading animation to feel intentional
-      setTimeout(() => {
+      try {
+        const data = await fetchSchoolInfo();
         setState({ loading: false, error: null, data });
-      }, 500);
+      } catch (err) {
+        setState({ loading: false, error: "Failed to load site data.", data: null });
+      }
     };
 
     const handleScroll = () => {

@@ -1,0 +1,9 @@
+# Disabled to prevent deployment conflicts with deploy.yml
+name: Disabled
+on:
+  workflow_dispatch: # Only manual, won't trigger on push
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Main deployment is in deploy.yml"
