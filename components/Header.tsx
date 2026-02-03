@@ -94,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({ schoolName }) => {
               <img 
                 src={logoUrl} 
                 alt="Logo" 
-                className={`relative z-10 w-full h-full object-contain transition-all duration-300 ${scrolled || isMenuOpen ? 'filter drop-shadow-sm' : 'filter drop-shadow-md'}`}
+                className={`relative z-10 w-full h-full object-cover rounded-full bg-slate-950/80 p-1 ring-1 ring-cyan-300/30 transition-all duration-300 ${scrolled || isMenuOpen ? 'filter drop-shadow-sm' : 'filter drop-shadow-md'}`}
               />
             </div>
             <div className="flex flex-col">
@@ -104,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({ schoolName }) => {
                 {schoolName.toUpperCase()}
               </span>
               <span className={`text-[7px] md:text-[9px] uppercase tracking-widest font-bold transition-colors duration-300 ${
-                scrolled || isMenuOpen ? 'text-indigo-600' : 'text-indigo-300'
+                scrolled || isMenuOpen ? 'text-cyan-700' : 'text-cyan-300'
               }`}>
                 Khekra, Baghpat
               </span>
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ schoolName }) => {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href)}
-                className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-indigo-500 ${
+                className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-cyan-300 ${
                   scrolled ? 'text-slate-700' : 'text-white'
                 }`}
               >
@@ -131,8 +131,8 @@ const Header: React.FC<HeaderProps> = ({ schoolName }) => {
               rel="noopener noreferrer"
               className={`px-5 py-2 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all ${
                 scrolled 
-                  ? 'bg-indigo-900 text-white hover:bg-indigo-800 shadow-lg shadow-indigo-200' 
-                  : 'bg-white text-indigo-900 hover:bg-indigo-50 shadow-md'
+                  ? 'bg-cyan-900 text-white hover:bg-cyan-800 shadow-lg shadow-cyan-200/30' 
+                  : 'bg-white text-slate-900 hover:bg-cyan-50 shadow-md'
               }`}
             >
               Admissions
@@ -146,9 +146,9 @@ const Header: React.FC<HeaderProps> = ({ schoolName }) => {
             aria-label="Toggle Menu"
           >
             <div className="w-6 flex flex-col items-end gap-1.5 relative h-4">
-              <span className={`h-0.5 absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-6 rotate-45 top-2 bg-indigo-950' : `w-6 top-0 ${scrolled ? 'bg-indigo-950' : 'bg-white'}`}`}></span>
-              <span className={`h-0.5 absolute transition-all duration-200 ease-in-out top-[7px] ${isMenuOpen ? 'opacity-0 right-0' : `w-4 right-0 ${scrolled ? 'bg-indigo-950' : 'bg-white'}`}`}></span>
-              <span className={`h-0.5 absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-6 -rotate-45 top-2 bg-indigo-950' : `w-5 bottom-0 ${scrolled ? 'bg-indigo-950' : 'bg-white'}`}`}></span>
+              <span className={`h-0.5 absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-6 rotate-45 top-2 bg-slate-900' : `w-6 top-0 ${scrolled ? 'bg-slate-900' : 'bg-white'}`}`}></span>
+              <span className={`h-0.5 absolute transition-all duration-200 ease-in-out top-[7px] ${isMenuOpen ? 'opacity-0 right-0' : `w-4 right-0 ${scrolled ? 'bg-slate-900' : 'bg-white'}`}`}></span>
+              <span className={`h-0.5 absolute transition-all duration-300 ease-in-out ${isMenuOpen ? 'w-6 -rotate-45 top-2 bg-slate-900' : `w-5 bottom-0 ${scrolled ? 'bg-slate-900' : 'bg-white'}`}`}></span>
             </div>
           </button>
         </div>
@@ -188,7 +188,7 @@ const Header: React.FC<HeaderProps> = ({ schoolName }) => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-900 hover:text-indigo-600 transition-all p-4 bg-white rounded-full shadow-sm hover:shadow-md active:scale-90"
+                className="text-slate-900 hover:text-cyan-600 transition-all p-4 bg-white rounded-full shadow-sm hover:shadow-md active:scale-90"
                 aria-label={social.name}
               >
                 {social.icon}

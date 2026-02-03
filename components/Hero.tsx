@@ -18,36 +18,38 @@ const Hero: React.FC<HeroProps> = ({ name, tagline, contact }) => {
           alt="PRM School Environment" 
           className="w-full h-full object-cover opacity-10"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/80 via-slate-950 to-slate-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-[#07151c] to-slate-950"></div>
         
         {/* Animated Background Blobs */}
-        <div className="absolute top-1/4 -right-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-indigo-800/5 rounded-full blur-[150px]"></div>
+        <div className="absolute top-1/4 -right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-emerald-700/10 rounded-full blur-[150px]"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10 pt-28 pb-12">
         <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
           
           {/* Logo / Crest Section */}
-          <div className="relative mb-8 group">
-             <div className="absolute -inset-12 bg-indigo-500/10 rounded-full blur-[80px] group-hover:bg-indigo-500/20 transition-all duration-1000"></div>
-             <div className="relative w-32 h-32 md:w-44 md:h-44 flex items-center justify-center transition-all duration-700 hover:scale-105 transform-gpu">
-               <img 
-                 src={logoUrl} 
-                 alt="P.R.M. Shield" 
-                 className="w-full h-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] brightness-110"
-               />
-             </div>
+          <div className="relative mb-10 group">
+            <div className="absolute -inset-10 bg-cyan-400/10 rounded-full blur-[70px] group-hover:bg-cyan-300/20 transition-all duration-1000"></div>
+            <div className="relative w-36 h-36 md:w-52 md:h-52 rounded-full bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-2 md:p-3 ring-2 ring-cyan-300/30 shadow-[0_25px_60px_rgba(8,145,178,0.25)] transition-all duration-700 hover:scale-[1.03] transform-gpu">
+              <div className="w-full h-full rounded-full overflow-hidden bg-black">
+                <img 
+                  src={logoUrl} 
+                  alt="P.R.M. Shield" 
+                  className="w-full h-full object-cover scale-[1.08] translate-y-[2%] filter drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)] brightness-110"
+                />
+              </div>
+            </div>
           </div>
           
           {/* Institution Header Box */}
           <div className="flex flex-col items-center gap-3 mb-8">
             <div className="flex items-center gap-4">
-              <span className="h-px w-8 bg-indigo-500/30"></span>
-              <span className="text-indigo-400 font-black uppercase tracking-[0.4em] text-[10px] md:text-xs">
+              <span className="h-px w-8 bg-cyan-400/30"></span>
+              <span className="text-cyan-300 font-black uppercase tracking-[0.4em] text-[10px] md:text-xs">
                 Since 2000
               </span>
-              <span className="h-px w-8 bg-indigo-500/30"></span>
+              <span className="h-px w-8 bg-cyan-400/30"></span>
             </div>
             
             <div className="border border-white/10 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-sm shadow-2xl">
@@ -58,12 +60,12 @@ const Hero: React.FC<HeroProps> = ({ name, tagline, contact }) => {
             
             <div className="flex flex-col items-center">
               <p className="text-white/60 text-sm md:text-base font-medium tracking-wide">Khekra, Baghpat, Uttar Pradesh</p>
-              <p className="text-indigo-500 font-black tracking-[0.2em] uppercase text-[9px] md:text-[10px]">U.P. Education Board Affiliated</p>
+              <p className="text-cyan-300 font-black tracking-[0.2em] uppercase text-[9px] md:text-[10px]">U.P. Education Board Affiliated</p>
             </div>
           </div>
           
           <h1 className="text-4xl md:text-7xl lg:text-8xl text-white font-bold mb-8 leading-[1.1] tracking-tighter max-w-4xl">
-            Nurturing <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-white to-indigo-300">Excellence</span> Every Day.
+            Nurturing <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-white to-emerald-200">Excellence</span> Every Day.
           </h1>
           
           <p className="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl font-light italic opacity-80">
@@ -84,9 +86,9 @@ const Hero: React.FC<HeroProps> = ({ name, tagline, contact }) => {
               href="https://drive.google.com/file/d/1XSsmnW2HWr0_wUculYjr3Y6JIRODZ5pp/view" 
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 px-10 py-5 bg-indigo-600/20 backdrop-blur-md border border-indigo-500/30 text-white font-black rounded-2xl hover:bg-indigo-600 hover:border-indigo-500 transition-all shadow-xl text-xs md:text-sm uppercase tracking-[0.2em] active:scale-95"
+              className="group flex items-center justify-center gap-3 px-10 py-5 bg-cyan-600/20 backdrop-blur-md border border-cyan-400/30 text-white font-black rounded-2xl hover:bg-cyan-600 hover:border-cyan-400 transition-all shadow-xl text-xs md:text-sm uppercase tracking-[0.2em] active:scale-95"
             >
-              <svg className="w-4 h-4 text-indigo-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4 text-cyan-200 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Enroll Now

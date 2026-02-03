@@ -28,12 +28,12 @@ const Footer: React.FC<FooterProps> = ({ schoolName, groundingSources }) => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-16 pb-20">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-5 mb-8">
-              <div className="w-20 h-20 rounded-2xl bg-white/5 p-3 flex items-center justify-center border border-white/10 shadow-lg">
-                <img src={logoUrl} alt="PRM logo" className="w-full h-full object-contain filter brightness-110" />
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-2 flex items-center justify-center border border-cyan-400/20 shadow-lg">
+                <img src={logoUrl} alt="PRM logo" className="w-full h-full object-cover rounded-full bg-black p-1 filter brightness-110" />
               </div>
               <div className="flex flex-col">
                 <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tighter uppercase">
-                  PRM <span className="text-indigo-500">PUBLIC SCHOOL</span>
+                  PRM <span className="text-cyan-300">PUBLIC SCHOOL</span>
                 </h3>
                 <span className="text-[10px] text-slate-600 uppercase tracking-[0.3em] font-bold">Nurturing Excellence Since 2000</span>
               </div>
@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ schoolName, groundingSources }) => {
                   href={social.href} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="px-6 py-3 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold uppercase tracking-widest hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all"
+                  className="px-6 py-3 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold uppercase tracking-widest hover:bg-cyan-600 hover:text-white hover:border-cyan-600 transition-all"
                 >
                   {social.name}
                 </a>
@@ -62,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({ schoolName, groundingSources }) => {
               {links.map(link => (
                 <li key={link.name}>
                   <a href={link.href} className="hover:text-white transition-colors flex items-center gap-2 group text-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 scale-0 group-hover:scale-100 transition-transform"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 scale-0 group-hover:scale-100 transition-transform"></span>
                     {link.name}
                   </a>
                 </li>
@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ schoolName, groundingSources }) => {
                   href="https://drive.google.com/file/d/1XSsmnW2HWr0_wUculYjr3Y6JIRODZ5pp/view" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-indigo-400 font-bold hover:text-indigo-300 transition-colors flex items-center gap-2 mt-4 text-sm"
+                  className="text-cyan-300 font-bold hover:text-cyan-200 transition-colors flex items-center gap-2 mt-4 text-sm"
                 >
                   Admission Form (PDF)
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
@@ -85,11 +85,11 @@ const Footer: React.FC<FooterProps> = ({ schoolName, groundingSources }) => {
             <h4 className="font-bold text-white mb-8 uppercase tracking-widest text-xs">School Details</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
-                 <span className="text-indigo-500 font-bold">Address:</span>
+                 <span className="text-cyan-400 font-bold">Address:</span>
                  <span>Khekra, Baghpat, UP-250101</span>
               </li>
               <li className="flex gap-3">
-                 <span className="text-indigo-500 font-bold">Email:</span>
+                 <span className="text-cyan-400 font-bold">Email:</span>
                  <a href="mailto:prmpublicschool@gmail.com" className="hover:text-white">prmpublicschool@gmail.com</a>
               </li>
               <li className="pt-4">
